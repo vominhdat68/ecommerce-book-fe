@@ -1,0 +1,393 @@
+.roboto-regular {
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100,
+        "YTLC" 500;
+}
+
+body {
+    font-family: sans-serif;
+    background: #F0F0F0;
+}
+
+strong {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* LOGO */
+.icon_fahasa_logo {
+    background: url("@/assets/images/header/fahasa-logo.png") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    width: 220px;
+    height: 36px;
+}
+
+.icon_menu {
+    background: url("@/assets/images/header/ico_menu.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    width: 36px;
+    height: 36px;
+}
+
+.icon_seemore_gray {
+    background: url("@/assets/images/header/icon_seemore_gray.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    width: 16px;
+    height: 16px;
+    /* transition: transform 0.5s ease; */
+}
+
+.ico_search_white {
+    background: url("@/assets/images/header/ico_search_white.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 20px;
+    width: 20px;
+    fill: #fff;
+}
+
+.icon_nofi_gray {
+    background: url("@/assets/images/header/ico_nofi_gray.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 24px;
+    width: 24px;
+    position: relative;
+}
+
+.icon_cart_gray {
+    background: url("@/assets/images/header/ico_cart_gray.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 24px;
+    width: 24px;
+    position: relative;
+}
+
+.icon_account_gray {
+    background: url("@/assets/images/header/ico_account_gray.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 24px;
+    width: 24px;
+    position: relative;
+}
+
+/* vn */
+.icon_store_default {
+    background: url("@/assets/images/header/ico_vne.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 24px;
+    width: 37px;
+}
+
+.icon_store_english {
+    background: url("@/assets/images/header/ico_english.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 24px;
+    width: 37px;
+}
+
+.ico_notlogin {
+    background: url("@/assets/images/customer/ico_login.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 80px;
+    width: 80px;
+}
+
+.icon_nofi_black {
+    background: url("@/assets/images/header/ico_nofi_black.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 24px;
+    width: 24px;
+}
+
+/* DROPDOWN NAVIFATE */
+
+.ico_sachtrongnuoc {
+    background: url("@/assets/images/category-menu/ico_sachtrongnuoc.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 24px;
+    width: 24px;
+    position: relative;
+}
+
+.ico_foreignbooks {
+    background: url("@/assets/images/category-menu/ico_foreignbooks.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 24px;
+    width: 24px;
+    position: relative;
+}
+
+.ico_VPP {
+    background: url("@/assets/images/category-menu/ico_VPP.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 24px;
+    width: 24px;
+    position: relative;
+}
+
+.ico_dochoi {
+    background: url("@/assets/images/category-menu/ico_dochoi.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 24px;
+    width: 24px;
+    position: relative;
+}
+
+.ico_lamdepsuckhoe {
+    background: url("@/assets/images/category-menu/ico_lamdepsuckhoe.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 24px;
+    width: 24px;
+    position: relative;
+}
+
+.ico_hanhtrangdentruong {
+    background: url("@/assets/images/category-menu/ico_hanhtrangdentruong.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 24px;
+    width: 24px;
+    position: relative;
+}
+
+.ico_bachhoaonline {
+    background: url("@/assets/images/category-menu/ico_bachhoaonline.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 24px;
+    width: 24px;
+    position: relative;
+}
+
+
+@keyframes slideDown {
+    0% {
+        max-height: 0;
+    }
+
+    100% {
+        max-height: 100%;
+    }
+}
+
+.animate-slide-down {
+    animation: slideDown 0.6s ease-in-out forwards;
+}
+
+
+/* SEARCH */
+.ico_close_gray {
+    background: url("@/assets/images/header/search/icon_close_gray.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    width: 24px;
+    height: 24px;
+}
+
+.ico_history_gray {
+    background: url("@/assets/images/header/search/ico_searchhistory_black.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    width: 24px;
+    height: 24px;
+}
+
+.ico_trending_gray {
+    background: url("@/assets/images/header/search/ico_searchtrending_black.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    width: 24px;
+    height: 24px;
+}
+
+.ico_refresh_gray {
+    background: url("@/assets/images/header/search/ico_refresh_gray.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    width: 24px;
+    height: 24px;
+}
+
+/* FOOTER */
+
+
+/* CART SHOPPING */
+.ico_trash {
+    background: url("@/assets/images/cart/ico_trash.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 22px;
+    width: 22px;
+}
+
+.ico_trash:hover {
+    background: url("@/assets/images/cart/ico_trash_red.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 22px;
+    width: 22px;
+}
+
+.cart {
+    color: #333333;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+/* SLIDER */
+.ico_arrow_gray {
+    background: url("@/assets/images/header/ico_arrow_gray.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 34px;
+    width: 34px;
+}
+
+.ico_arrow_gray.right {
+    transform: rotate(-180deg);
+}
+
+.swiper-pagination-bullet {
+    width: 8px !important;
+    height: 8px !important;
+    border-radius: 4px !important;
+    background: #fff !important;
+    opacity: 1 !important;
+    transition: all 0.5s ease-in-out
+}
+
+/* bullet active */
+.swiper-pagination-bullet-active {
+    width: 24px !important;
+    background: #C92127 !important;
+}
+
+
+/*  SECTION CATEGORY */
+.ico_menu_red {
+    background: url("@/assets/images/section/ico_menu_red.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+}
+
+.ico_sachtrongnuoc {
+    background: url("@/assets/images/category-menu/ico_sachtrongnuoc.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    width: 32px;
+    height: 32px;
+}
+
+
+.ico_ring_loader {
+    background: url("@/assets/images/ring_loader.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+}
+
+.ico_star_yellow {
+    background: url("@/assets/images/ico_star_yellow.svg") repeat-x center center;
+    background-position: left center;
+    /* co dinh toa do (dau moc )tai mot diem  */
+    background-size: auto 100%;
+    width: inherit;
+    height: inherit;
+
+}
+
+.ico_star_gray {
+    background: url("@/assets/images/ico_star_gray.svg") repeat-x center center;
+    background-position: left center;
+    /* co dinh toa do (dau moc )tai mot diem  */
+    background-size: auto 100%;
+    width: inherit;
+    height: inherit;
+}
+
+.ico_promo_more_red {
+    background: url("@/assets/images/product-detail/ico_promo_more_red.svg") no-repeat center center;
+    -webkit-background-size: 5px;
+    -moz-background-size: 5px;
+    background-size: 5px;
+    height: 18px;
+    width: 18px;
+    margin-bottom: auto;
+    margin-top: auto;
+}

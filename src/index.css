@@ -1,0 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200..1000&display=swap');
+
+@import "normalize.css";
+@import "tailwindcss";
+@import "./shared/styles/bundle.css";
