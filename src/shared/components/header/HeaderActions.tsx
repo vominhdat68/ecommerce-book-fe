@@ -6,7 +6,7 @@ import { PATHS } from "@/shared/routes/paths";
 import HoverPopupIcon from "@/shared/components/HoverPopupIcon";
 import NotifiPopup from "@/shared/components/header/HeaderActions/NotifiPopup"
 
-
+import AuthButtons from "@/shared/components/AuthButtons";
 
 const HeaderActions: React.FC = () => {
   return (
@@ -22,7 +22,7 @@ const HeaderActions: React.FC = () => {
       />
       <HoverPopupIcon
         labelContent={<IconActions url_page={PATHS.auth.loginReferer} iconClass="icon_account_gray" label="Tài khoản" />}
-        popupContent={<></>}
+        popupContent={<AuthButtons/>}
       />
       <LangIcon />
 

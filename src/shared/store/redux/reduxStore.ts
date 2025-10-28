@@ -1,12 +1,16 @@
 // app/store.ts
 import { configureStore } from '@reduxjs/toolkit';
 
+import controlModalReducer from '@/shared/slice/ControlModalSlice'
+
 export const store = configureStore({
   reducer: {
     //----------------- STORE DATA LOGIC -----------------    
 
 
     //----------------- STORE UI -----------------
+    controlModal: controlModalReducer, // dung cho dong mo modal( fix click <link> ko dong modal)
+    
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
