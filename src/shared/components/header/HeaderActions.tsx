@@ -25,7 +25,7 @@ const HeaderActions: React.FC = () => {
         popupContent={<AuthButtons/>}
       />
       <LangIcon />
-
+    
     </div>
   );
 };
