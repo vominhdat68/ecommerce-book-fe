@@ -4,7 +4,9 @@ import { Link } from "react-router-dom";
 import bannerTopBar from "/cfhs/image/header_1263x60.png";
 
 import NavMenu from "@/shared/components/header/NavMenu/NavMenu";
-import HeaderLogo from "@/shared/components/header/HeaderLogo";
+import HeaderLogo from "@/shared/components/header/HeaderLogo"; 
+import HeaderActions from "@/shared/components/header/HeaderActions";
+
 
 const Header: React.FC = () => {
     return (
@@ -26,7 +28,8 @@ const Header: React.FC = () => {
             <div className="max-w-[1200px] mx-auto">
                 <div className="flex items-center relative z-30 h-[60px]">
                     <HeaderLogo />
-                    <NavMenu /> 
+                    <NavMenu />
+                    <HeaderActions/>
                 </div>
             </div>
         </header>
