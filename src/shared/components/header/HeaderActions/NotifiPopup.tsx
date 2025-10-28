@@ -1,3 +1,4 @@
+import AuthButtons from "@/shared/components/AuthButtons";
 
 const NotifiPopup: React.FC = () => {
     return (
@@ -10,6 +11,9 @@ const NotifiPopup: React.FC = () => {
                 <div className="flex flex-col items-center text-center gap-3 py-5 border-t border-[#F2F4F5] px-4">
                     <span className="ico_notlogin block" />
                     <span className="text-[1.23em] text-[#0D0E0F]" >Vui lòng đăng nhập để xem thông báo</span>
+                </div>
+                <div className="px-4">
+                    <AuthButtons />
                 </div>
             </div>
         </>
