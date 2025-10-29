@@ -3,6 +3,7 @@ import { ActionButton } from "@/shared/components/Button";
 import CustomInput from "@/shared/components/CustomInput";
 
 import { MethodSelector, OTPInput } from "@/features/auth/components/AuthForms//index";
+import CloudflareCaptcha from "@/features/auth/components/AuthForms/CloudflareCaptcha";
 
 type AuthFormsProps = {
   state: any;
@@ -71,6 +72,16 @@ const AuthForms: React.FC<AuthFormsProps> = ({
             selectedMethod={state.formData.selectedMethod}
             disabled={validation.validForm.isPhoneValid}
             onSelect={actions.selectOTPMethod}
+          />
+        )}
+
+        {/* Captcha */}
+        {showCaptcha && (
+          <CloudflareCaptcha
+            sitekey={import.meta.env.VITE_CF_TURNSTILE_SITE_KEY}
+            onVerify={actions.captcha.verify}
+            size="flexible"
+            language="vi"
           />
         )}
 
