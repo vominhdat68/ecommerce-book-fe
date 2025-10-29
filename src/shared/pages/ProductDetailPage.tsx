@@ -11,6 +11,7 @@ import { useProductPolicies } from '@/features/product-detail/hooks/useProductPo
 import { useQuantity } from '@/features/product-detail/hooks/useQuantity';
 import { useCheckStockQuery } from '@/features/cart/services/cartService';
 import { ProductImageSection } from '@/features/product-detail/components/baner_left/ProductImageSection';
+import { ProductInfoSection } from '@/features/product-detail/components/banner_right/ProductInfoSection';
 
 export const ProductDetailPage: React.FC = () => {
   const { targetProductId, productDetail, isLoading, isError } = useProductDetail();
@@ -70,6 +71,14 @@ export const ProductDetailPage: React.FC = () => {
               availableStock={availableStock}
             />
 
+            <ProductInfoSection
+              productDetail={productDetail}
+              productId={targetProductId}
+              quantity={quantity}
+              onQuantityChange={setQuantity}
+              isOutOfStock={isOutOfStock}
+              availableStock={availableStock}
+            />
           </div>
 
         </div>
