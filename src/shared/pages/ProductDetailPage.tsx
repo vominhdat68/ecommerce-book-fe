@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import '../../features/product-detail/styles/style.detail.css'
 
 import SectionContainer from '@/shared/components/SectionContainer';
@@ -13,6 +13,7 @@ import { useCheckStockQuery } from '@/features/cart/services/cartService';
 import { ProductImageSection } from '@/features/product-detail/components/ProductImageSection';
 import { ProductInfoSection } from '@/features/product-detail/components/ProductInfoSection';
 import ProductReview from '@/features/product-detail/components/ProductReview';
+import { AddToCartPopup } from '@/features/product-detail/components/AddToCartPopupProps';
 
 export const ProductDetailPage: React.FC = () => {
   const { targetProductId, productDetail, isLoading, isError } = useProductDetail();
@@ -51,6 +52,10 @@ export const ProductDetailPage: React.FC = () => {
   // Kiểm tra nếu sản phẩm hết hàng (BR01)
   const isOutOfStock = stockData ? !stockData.available : false;
   const availableStock = stockData?.stock || 0;
+
+  // State cho popup và thông báo
+  const [isPopupVisible, setIsPopupVisible] = useState(false);
+  const handleClosePopup = useCallback(() => setIsPopupVisible(false), []);
 
   if (isLoading || isStockLoading) return <ProductDetailSkeleton />;
   if (isError || !targetProductId || !productDetail) return <NotFoundPage />;
@@ -92,6 +97,12 @@ export const ProductDetailPage: React.FC = () => {
             />
           </div>
 
+          {/* Popup thông báo */}
+          <AddToCartPopup
+            isVisible={isPopupVisible}
+            onClose={handleClosePopup}
+            duration={2000}
+          />
         </div>
       </SectionContainer>
 
