@@ -7,6 +7,7 @@ import NavCatMenuItems from "@/features/home/layouts/NavSectionSlider/NavCatMenu
 import NavCatFlashSaletems from "@/features/home/layouts/NavSectionSlider/NavCatFlashSaletems";
 
 import NavCatProductSectionSlider from "@/features/home/layouts/NavCatProductSection";
+import NavCatEventSectionSlider from "@/features/home/layouts/NavSectionSlider/NavCatEventSectionSlider";
 
 
 const Home: React.FC = () => {
@@ -23,6 +24,9 @@ const Home: React.FC = () => {
       <NavCatFlashSaletems type="flash-sale" />
 
       <NavCatProductSectionSlider items={featured_categories} isLoading={loadingMenu} />
+      <NavCatEventSectionSlider type="festival" />
+      <NavCatEventSectionSlider type="holiday" />
+
     </div>
   );
 };
