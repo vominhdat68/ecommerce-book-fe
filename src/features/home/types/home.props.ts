@@ -33,3 +33,16 @@ export interface Banner {
   start_date?: string;
   end_date?: string;
 }
+
+
+export interface CategoryMenuItem {
+  id: number;
+  name: string;
+  image_src: string;
+  category_url: string;
+  description?: string;
+  order: number;
+  badge?: string;
+  parent_id?: number;
+  children?: CategoryMenuItem[];
+}
