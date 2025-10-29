@@ -12,6 +12,7 @@ import CatSectionTabs from "@/features/home/components/CatSectionTabs/CatSection
 import NavCatPopSectionSlider from "@/features/home/layouts/NavSectionSlider/NavCatPopSectionSlider";
 import CatSectionTabsRank from "@/features/home/components/CatSectionTabsRank";
 import NavCatPubSectionSlider from "@/features/home/layouts/NavSectionSlider/NavCatPubSectionSlider";
+import CatSuggestionsSlider from "@/features/home/layouts/NavSectionSlider/CatSuggestionsSlider";
 
 const Home: React.FC = () => {
   const { data, isLoading: loadingMenu } = useGetMenuQuery();
@@ -44,6 +45,7 @@ const Home: React.FC = () => {
       <CatSectionTabsRank typeProduct="rank" />
       <NavCatPubSectionSlider items={ncc} isLoading={loadingMenu} />
 
+      <CatSuggestionsSlider />
     </div>
   );
 };
