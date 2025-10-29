@@ -34,8 +34,8 @@ build/
 .env.production.local
 
 # Build output
-src/assets
-public
+# src/assets
+# public
 
 # config files
 # tsconfig.app.json
