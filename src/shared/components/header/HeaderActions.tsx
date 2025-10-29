@@ -7,6 +7,7 @@ import HoverPopupIcon from "@/shared/components/HoverPopupIcon";
 import NotifiPopup from "@/shared/components/header/HeaderActions/NotifiPopup"
 
 import AuthButtons from "@/shared/components/AuthButtons";
+import AuthModal from "@/shared/components/AuthModal";
 
 const HeaderActions: React.FC = () => {
   return (
@@ -17,15 +18,17 @@ const HeaderActions: React.FC = () => {
         popupContent={<NotifiPopup />}
       />
       <HoverPopupIcon
-        labelContent={<IconActions url_page={PATHS.checkout.cart} iconClass="icon_cart_gray" label="Giỏ Hàng"  />}
+        labelContent={<IconActions url_page={PATHS.checkout.cart} iconClass="icon_cart_gray" label="Giỏ Hàng" />}
         popupContent={<></>}
       />
       <HoverPopupIcon
         labelContent={<IconActions url_page={PATHS.auth.loginReferer} iconClass="icon_account_gray" label="Tài khoản" />}
-        popupContent={<AuthButtons/>}
+        popupContent={<AuthButtons />}
       />
       <LangIcon />
-    
+
+      {/* Modal login/register */}
+      <AuthModal />
     </div>
   );
 };
