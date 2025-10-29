@@ -10,8 +10,9 @@ import { useCartActions } from '@/features/product-detail/hooks/useCartActions';
 import { useProductPolicies } from '@/features/product-detail/hooks/useProductPolicies';
 import { useQuantity } from '@/features/product-detail/hooks/useQuantity';
 import { useCheckStockQuery } from '@/features/cart/services/cartService';
-import { ProductImageSection } from '@/features/product-detail/components/baner_left/ProductImageSection';
-import { ProductInfoSection } from '@/features/product-detail/components/banner_right/ProductInfoSection';
+import { ProductImageSection } from '@/features/product-detail/components/ProductImageSection';
+import { ProductInfoSection } from '@/features/product-detail/components/ProductInfoSection';
+import ProductReview from '@/features/product-detail/components/ProductReview';
 
 export const ProductDetailPage: React.FC = () => {
   const { targetProductId, productDetail, isLoading, isError } = useProductDetail();
@@ -78,6 +79,16 @@ export const ProductDetailPage: React.FC = () => {
               onQuantityChange={setQuantity}
               isOutOfStock={isOutOfStock}
               availableStock={availableStock}
+            />
+          </div>
+
+          <div className="mt-8">
+            <ProductReview
+              productId={targetProductId}
+              averageRating={productDetail.average_rating}
+              totalReviews={productDetail.total_reviews}
+              ratingsDistribution={productDetail.ratings_distribution}
+              reviews={productDetail.reviews}
             />
           </div>
 

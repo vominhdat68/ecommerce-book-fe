@@ -1,8 +1,8 @@
 // components/ProductImageSection.tsx
 import React from 'react';
-import { ProductActions } from './ProductActions';
-import { PolicySection } from './PolicySection';
-import ProductImageGallery from './ProductImageGallery';
+import { ProductActions } from './baner_left/ProductActions';
+import { PolicySection } from './baner_left/PolicySection';
+import ProductImageGallery from './baner_left/ProductImageGallery';
 
 interface ProductImageSectionProps {
   images: string[];
@@ -41,9 +41,9 @@ export const ProductImageSection: React.FC<ProductImageSectionProps> = ({
           availableStock={availableStock}
         />
 
-        <PolicySection 
-          onPolicyClick={onPolicyClick} 
-          onKeyPress={onKeyPress} 
+        <PolicySection
+          onPolicyClick={onPolicyClick}
+          onKeyPress={onKeyPress}
         />
       </div>
     </div>
