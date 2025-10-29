@@ -2,6 +2,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { rootAuthReducer } from '@/features/auth/slices';
 import { authApi } from "@/features/auth/services/authSliceService";
+import { searchServices } from "@/features/search/services/searchService";
 
 import controlModalReducer from '@/shared/slice/ControlModalSlice'
 
@@ -9,6 +10,7 @@ export const store = configureStore({
   reducer: {
     auth: rootAuthReducer,
     [authApi.reducerPath]: authApi.reducer,
+     [searchServices.reducerPath]: searchServices.reducer,
     //----------------- STORE DATA LOGIC -----------------    
 
 
@@ -23,6 +25,7 @@ export const store = configureStore({
     })
       .concat([
         authApi.middleware,
+        searchServices.middleware,
       ]),
 
 });
