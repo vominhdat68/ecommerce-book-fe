@@ -1,6 +1,6 @@
 // src/services/cartApi.ts
 import { createApi } from '@reduxjs/toolkit/query/react';
-import type { ProductDetailResponse } from '@/features/product-detail/detailProduct.type';
+import type { ProductDetailResponse } from '@/features/product-detail/types/detailProduct.type';
 import { mockBaseQuery } from './mock/mockBaseQuery';
 
 export const productDetailService = createApi({

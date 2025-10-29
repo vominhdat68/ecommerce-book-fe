@@ -1,9 +1,11 @@
-import React, { useCallback, useState } from 'react';
+import React, { Suspense, useCallback, useState } from 'react';
 import '../../features/product-detail/styles/style.detail.css'
 
 import SectionContainer from '@/shared/components/SectionContainer';
 import { ProductDetailSkeleton } from '@/shared/components/skeleton-screen/ProductDetailSkeleton';
 import NotFoundPage from '@/shared/pages/NotFoundPage';
+import LazyLoadOnScroll from '@/shared/components/lazyload/LazyLoadOnScroll';
+import { ProductsCardSkeleton } from '@/shared/components/skeleton-screen/HomeSkeleton';
 
 import { useProductDetail } from '@/features/product-detail/hooks/useProductDetail';
 import { useCartActions } from '@/features/product-detail/hooks/useCartActions';
@@ -14,10 +16,12 @@ import { ProductImageSection } from '@/features/product-detail/components/Produc
 import { ProductInfoSection } from '@/features/product-detail/components/ProductInfoSection';
 import ProductReview from '@/features/product-detail/components/ProductReview';
 import { AddToCartPopup } from '@/features/product-detail/components/AddToCartPopupProps';
+import CatSuggestionsSlider from '@/features/home/layouts/NavSectionSlider/CatSuggestionsSlider';
+import NavCatIntroSectionSlider from '@/features/product-detail/components/NavCatIntroSectionSlider';
+
 
 export const ProductDetailPage: React.FC = () => {
   const { targetProductId, productDetail, isLoading, isError } = useProductDetail();
-
   const { quantity, setQuantity } = useQuantity({
     initialQuantity: 1,
     maxQuantity: productDetail?.stock_quantity || 100,
@@ -32,7 +36,7 @@ export const ProductDetailPage: React.FC = () => {
     { skip: !targetProductId }
   );
 
-  // Cart actions với callbacks được cải tiến
+  // Cart actions với callbacks
   const { handleAddToCart, handleBuyNow, isLoading: isCartLoading } = useCartActions(
     targetProductId,
     {
@@ -97,16 +101,28 @@ export const ProductDetailPage: React.FC = () => {
             />
           </div>
 
-          {/* Popup thông báo */}
-          <AddToCartPopup
-            isVisible={isPopupVisible}
-            onClose={handleClosePopup}
-            duration={2000}
-          />
+          {/* embeb component */}
+          <LazyLoadOnScroll priority="low">
+            <Suspense fallback={<ProductsCardSkeleton />}>
+              <NavCatIntroSectionSlider typeProduct="intro" />
+            </Suspense>
+          </LazyLoadOnScroll>
+
+          <LazyLoadOnScroll priority="low">
+            <Suspense fallback={<ProductsCardSkeleton />}>
+              <CatSuggestionsSlider />
+            </Suspense>
+          </LazyLoadOnScroll>
+
         </div>
       </SectionContainer>
 
-
+      {/* Popup thông báo */}
+      <AddToCartPopup
+        isVisible={isPopupVisible}
+        onClose={handleClosePopup}
+        duration={2000}
+      />
     </>
   );
 };
