@@ -6,7 +6,10 @@ import { searchServices } from "@/features/search/services/searchService";
 
 import { homeService } from '@/features/home/service/homeService';
 
+
 import controlModalReducer from '@/shared/slice/ControlModalSlice'
+import { cartService } from '@/features/cart/services/cartService';
+import cartReducer from "@/features/cart/slices/cartSlice"
 
 export const store = configureStore({
   reducer: {
@@ -15,9 +18,10 @@ export const store = configureStore({
     [searchServices.reducerPath]: searchServices.reducer,
 
     [homeService.reducerPath]: homeService.reducer,
-
-
+    [cartService.reducerPath]: cartService.reducer,
+    
     //----------------- STORE UI -----------------
+    cart: cartReducer, // UI state của cart
     controlModal: controlModalReducer, // dung cho dong mo modal( fix click <link> ko dong modal)
   },
   middleware: (getDefaultMiddleware) =>
@@ -31,6 +35,7 @@ export const store = configureStore({
         searchServices.middleware,
 
         homeService.middleware,
+        cartService.middleware,
 
       ]),
 
