@@ -42,3 +42,24 @@ export function formatCurrencyVND(value: number | string): string {
     currency: "VND",
   }).format(numericValue);
 }
+
+// Hàm định dạng ngày sang "Thứ X – dd/MM/yyyy"
+export const formatDateVN = (isoString: string): string => {
+  const date = new Date(isoString);
+  const days = [
+    "Chủ nhật",
+    "Thứ hai",
+    "Thứ ba",
+    "Thứ tư",
+    "Thứ năm",
+    "Thứ sáu",
+    "Thứ bảy",
+  ];
+
+  const dayOfWeek = days[date.getDay()];
+  const day = date.getDate().toString().padStart(2, "0");
+  const month = (date.getMonth() + 1).toString().padStart(2, "0");
+  const year = date.getFullYear();
+
+  return `${dayOfWeek}(${day}/${month}/${year})`;
+};
