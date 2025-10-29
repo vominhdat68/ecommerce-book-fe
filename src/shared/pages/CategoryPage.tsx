@@ -9,6 +9,9 @@ import NotFoundPage from "@/shared/pages/NotFoundPage";
 import { useGetProductsCategoryQuery } from "@/features/categories/services/categoryService";
 import type { FilterState } from "@/features/categories/types/category.type";
 import SidebarFilter from "@/features/categories/components/SidebarFilter";
+import CategoryBanner from "@/features/categories/components/CategoryBanner";
+import SortHeader from "@/features/categories/components/SortHeader";
+import ProductList from "@/features/categories/components/ProductList";
 
 const DomesticBooksPage: React.FC = () => {
   const location = useLocation();
@@ -81,6 +84,12 @@ const DomesticBooksPage: React.FC = () => {
     setPage(1);
   };
 
+  const handleSortChange = (sortValue: string) => {
+    setSelectedSort(sortValue);
+    setPage(1);
+  };
+  const handlePageChange = (newPage: number) => setPage(newPage);
+
   // Sync category_id
   useEffect(() => {
     if (category_id) {
@@ -125,7 +134,19 @@ const DomesticBooksPage: React.FC = () => {
         />
 
         <main className="grow p-4 bg-white rounded-lg shadow-sm h-fit">
-
+          <CategoryBanner
+          // bannerImages={data.category?.banners || []}
+          />
+          <SortHeader
+            data={data}
+            selectedSort={selectedSort}
+            onSortChange={handleSortChange}
+          />
+          <ProductList
+            data={data}
+            page={page}
+            onPageChange={handlePageChange}
+          />
         </main>
       </div>
     </SectionContainer>
