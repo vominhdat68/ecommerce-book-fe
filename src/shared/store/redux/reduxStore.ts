@@ -1,21 +1,19 @@
 // app/store.ts
 import { configureStore } from '@reduxjs/toolkit';
-
 import { rootAuthReducer } from '@/features/auth/slices';
 import { authApi } from "@/features/auth/services/authSliceService";
-
 
 import controlModalReducer from '@/shared/slice/ControlModalSlice'
 
 export const store = configureStore({
   reducer: {
-    //----------------- STORE DATA LOGIC -----------------    
     auth: rootAuthReducer,
     [authApi.reducerPath]: authApi.reducer,
+    //----------------- STORE DATA LOGIC -----------------    
+
 
     //----------------- STORE UI -----------------
     controlModal: controlModalReducer, // dung cho dong mo modal( fix click <link> ko dong modal)
-
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
