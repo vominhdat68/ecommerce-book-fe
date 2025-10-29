@@ -1,0 +1,98 @@
+.bg_promo {
+    background: url("@/assets/images/product-detail/bg-promo.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+
+}
+
+.bg_ico_promo_tag_blu {
+    background: url("@/assets/images/product-detail/bg-ico-promo-tag-blu.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+}
+
+.bg_ico_promo_tag_yellow {
+    background: url("@/assets/images/product-detail/bg-ico-promo-tag-yellow.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    /* height: 24px;
+    width: 24px; */
+}
+
+.ico_promo_pay {
+    background: url("@/assets/images/product-detail/ico-promo-pay.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+}
+
+.ico_promo_sale {
+    background: url("@/assets/images/product-detail/ico-promo-sale.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 24px;
+    width: 24px;
+    position: relative;
+}
+
+.ico_right_arrow_blue {
+    background: url("@/assets/images/cart/ico_right-arrow.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 18px;
+    width: 18px;
+    position: relative;
+}
+
+.ico_delivery_green {
+    background: url("@/assets/images/product-detail/ico-delivery-green.png") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 24px;
+    width: 32px;
+    position: relative;
+}
+
+.ico_cart_red {
+    background: url("@/assets/images/product-detail/ico_cart_red.svg") no-repeat center center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 24px;
+    width: 22px;
+    position: relative;
+}
+
+.ico_arrow_right_black {
+    background: url("@/assets/images/product-detail/ico_arrow_right_black.svg") no-repeat center center;
+    -webkit-background-size: 6px;
+    -moz-background-size: 6px;
+    background-size: 6px;
+    height: 18px;
+    width: 18px;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+.detail-product {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+    color: #1f2937;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.6;
+}
