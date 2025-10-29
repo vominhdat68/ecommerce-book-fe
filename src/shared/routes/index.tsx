@@ -23,6 +23,17 @@ const CartPage = Loadable(lazy(() => import("@/shared/pages/CartPage")), <CartPa
 const ProductDetailPage = Loadable(lazy(() => import("@/shared/pages/ProductDetailPage")), <ProductDetailSkeleton />);
 const NotFoundPage = Loadable(lazy(() => import("@/shared/pages/NotFoundPage")), <></>);
 
+const CategoryPage = lazy(() => import('@/shared/pages/CategoryPage'));
+const categoryRoutes = [
+  { path: PATHS.category.domesticBooks, element: <CategoryPage /> },
+  { path: PATHS.category.foreignBooks, element: <CategoryPage /> },
+  { path: PATHS.category.stationery, element: <CategoryPage /> },
+  { path: PATHS.category.toys, element: <CategoryPage /> },
+  { path: PATHS.category.beautyHealth, element: <CategoryPage /> },
+  { path: PATHS.category.stationeryByBrand, element: <CategoryPage /> },
+  { path: PATHS.category.onlineGroceryGifts, element: <CategoryPage /> },
+];
+
 const AppRoutes: React.FC = () => {
 
   const routes = createBrowserRouter([
@@ -38,6 +49,7 @@ const AppRoutes: React.FC = () => {
         { path: PATHS.auth.loginReferer, element: <LoginPage /> },
         { path: PATHS.checkout.cart, element: <CartPage /> },
         { path: PATHS.product.detail, element: <ProductDetailPage /> },
+        ...categoryRoutes, //>>>inject tự động CategoryPage
         { path: PATHS.general.notFound, element: <NotFoundPage /> },
       ]
     },
