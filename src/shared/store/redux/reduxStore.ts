@@ -4,14 +4,17 @@ import { rootAuthReducer } from '@/features/auth/slices';
 import { authApi } from "@/features/auth/services/authSliceService";
 import { searchServices } from "@/features/search/services/searchService";
 
+import { homeService } from '@/features/home/service/homeService';
+
 import controlModalReducer from '@/shared/slice/ControlModalSlice'
 
 export const store = configureStore({
   reducer: {
     auth: rootAuthReducer,
     [authApi.reducerPath]: authApi.reducer,
-     [searchServices.reducerPath]: searchServices.reducer,
-    //----------------- STORE DATA LOGIC -----------------    
+    [searchServices.reducerPath]: searchServices.reducer,
+
+    [homeService.reducerPath]: homeService.reducer,
 
 
     //----------------- STORE UI -----------------
@@ -26,6 +29,9 @@ export const store = configureStore({
       .concat([
         authApi.middleware,
         searchServices.middleware,
+
+        homeService.middleware,
+
       ]),
 
 });
