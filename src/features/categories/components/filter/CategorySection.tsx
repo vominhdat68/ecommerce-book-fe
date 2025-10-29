@@ -1,5 +1,5 @@
 import React from "react";
-import ShowMoreWrapper from "@/features/categories/components/ShowMoreButton";
+import ShowMoreWrapper from "@/features/categories/components/filter/ShowMoreButton";
 import type { FilterState } from "@/features/categories/types/category.type";
 
 interface CategorySectionProps {
@@ -16,11 +16,10 @@ const CategorySection: React.FC<CategorySectionProps> = ({ data, onSelect }) => 
         return (
           <div
             key={parent.id}
-            className={`text-sm transition-colors ${
-              isActive
+            className={`text-sm transition-colors ${isActive
                 ? "font-medium text-[#C92127]"
                 : "text-gray-500 hover:text-[#C92127] cursor-pointer"
-            }`}
+              }`}
             onClick={() => !isActive && onSelect("category", parent.id)}
           >
             {parent.name}

@@ -1,5 +1,5 @@
 import React from "react";
-import ShowMoreWrapper from "@/features/categories/components/ShowMoreButton";
+import ShowMoreWrapper from "@/features/categories/components/filter/ShowMoreButton";
 import type { FilterState } from "@/features/categories/types/category.type";
 
 interface AttributeFilterProps {
@@ -28,7 +28,7 @@ const AttributeFilter: React.FC<AttributeFilterProps> = ({
         const checked = code
           ? selectedFilters[code as keyof FilterState] === item.param
           : selectedFilters.price_range.min === item.from &&
-            selectedFilters.price_range.max === item.to;
+          selectedFilters.price_range.max === item.to;
 
         return (
           <label

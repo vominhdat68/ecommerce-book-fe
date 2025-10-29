@@ -1,6 +1,6 @@
 import React from "react";
-import CategorySection from "@/features/categories/components/CategorySection";
-import AttributeFilter from "@/features/categories/components/AttributeFilter";
+import CategorySection from "@/features/categories/components/filter/CategorySection";
+import AttributeFilter from "@/features/categories/components/filter/AttributeFilter";
 import type { FilterState } from "@/features/categories/types/category.type";
 
 const PRICE_OPTIONS = [
