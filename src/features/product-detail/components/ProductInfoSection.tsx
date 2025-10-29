@@ -6,7 +6,7 @@ import PromotionsSection from '@/features/product-detail/components/banner_right
 import QuantitySelector from '@/features/product-detail/components/banner_right/shipping/QuantitySelector';
 import ProductDetailInfoCard from '@/features/product-detail/components/banner_right/ProductDetailInfoCard';
 import ProductDescription from '@/features/product-detail/components/banner_right/ProductDescription';
-import type { ProductDetailResponse } from '@/features/product-detail/detailProduct.type';
+import type { ProductDetailResponse } from '@/features/product-detail/types/detailProduct.type';
 
 interface ProductInfoSectionProps {
   productDetail: ProductDetailResponse;
