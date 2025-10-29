@@ -10,6 +10,8 @@ import NavCatProductSectionSlider from "@/features/home/layouts/NavCatProductSec
 import NavCatEventSectionSlider from "@/features/home/layouts/NavSectionSlider/NavCatEventSectionSlider";
 import CatSectionTabs from "@/features/home/components/CatSectionTabs/CatSectionTabs";
 import NavCatPopSectionSlider from "@/features/home/layouts/NavSectionSlider/NavCatPopSectionSlider";
+import CatSectionTabsRank from "@/features/home/components/CatSectionTabsRank";
+
 
 const Home: React.FC = () => {
   const { data, isLoading: loadingMenu } = useGetMenuQuery();
@@ -37,6 +39,8 @@ const Home: React.FC = () => {
 
       <NavCatPopSectionSlider title="Tủ sách nổi bật" items={tsdnb} isLoading={loadingMenu} />
       <NavCatPopSectionSlider title="Bộ sưu tập nổi bật" items={bst_nb} isLoading={loadingMenu} />
+
+      <CatSectionTabsRank typeProduct="rank" />
     </div>
   );
 };
