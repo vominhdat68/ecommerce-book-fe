@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import { PATHS } from '@/shared/routes/paths';
 import MainLayoutHome from "@/shared/layouts/MainLayoutHome";
+import HomePage from "@/shared/pages/HomePage";
 
 const AppRoutes: React.FC = () => {
   const routes = createBrowserRouter([
@@ -11,6 +12,7 @@ const AppRoutes: React.FC = () => {
         <MainLayoutHome />
       </>,
       children: [
+        { index: true, element: <HomePage /> },
       ]
     },
 
