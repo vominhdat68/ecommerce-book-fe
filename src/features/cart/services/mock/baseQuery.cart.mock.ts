@@ -89,7 +89,7 @@ export const mockBaseQuery: BaseQueryFn<string | FetchArgs, unknown, unknown> = 
   if (url === "/cart/mini" && method === "GET") {
     // Trích xuất thông tin minicart từ cartData
     const minicartData = {
-      items:  cartData.items.slice(0,5).map(item => ({
+      items: cartData.items.slice(0, 5).map(item => ({
         product_id: item.product_id,
         name: item.name,
         image: item.image,
@@ -100,7 +100,7 @@ export const mockBaseQuery: BaseQueryFn<string | FetchArgs, unknown, unknown> = 
       })),
       cart_items_count: cartData.items.length
     };
-console.log(minicartData)
+
     return { data: minicartData };
   }
 
@@ -117,11 +117,16 @@ console.log(minicartData)
       // Nếu có rồi → tăng số lượng (immutable update)
       cartData = {
         ...cartData,
-        items: cartData.items.map((item, index) =>
-          index === existingIndex
-            ? { ...item, quantity: item.quantity + newItem.quantity }
-            : item
-        )
+        items: cartData.items.map((item, index) => {
+          const product = productsData.find(
+            (p) => String(p.product_id) === String(newItem.product_id)
+          );
+          let stock_quantity = product?.stock_quantity ?? 0;
+    console.log(stock_quantity)
+          return index === existingIndex
+            ? { ...item, quantity: Math.min(item.quantity + newItem.quantity, stock_quantity) }
+            : item;
+        })
       };
     } else {
       // Nếu chưa có → tìm thông tin sản phẩm từ data_profile_product

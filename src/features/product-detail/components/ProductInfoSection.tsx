@@ -50,7 +50,7 @@ export const ProductInfoSection: React.FC<ProductInfoSectionProps> = ({
 
         <QuantitySelector
           productId={productId}
-          maxQuantity={Math.min(availableStock, 100)} // BR02: Giới hạn số lượng mua tối đa
+          maxQuantity={Math.max(1, availableStock)} // BR02: Giới hạn số lượng mua ít nhất
           quantity={quantity}
           onQuantityChange={onQuantityChange}
           isOutOfStock={isOutOfStock}
