@@ -10,6 +10,7 @@ import { homeService } from '@/features/home/service/homeService';
 import controlModalReducer from '@/shared/slice/ControlModalSlice'
 import { cartService } from '@/features/cart/services/cartService';
 import cartReducer from "@/features/cart/slices/cartSlice"
+import { productDetailService } from '@/features/product-detail/service/detailProductService'
 
 export const store = configureStore({
   reducer: {
@@ -19,7 +20,8 @@ export const store = configureStore({
 
     [homeService.reducerPath]: homeService.reducer,
     [cartService.reducerPath]: cartService.reducer,
-    
+    [productDetailService.reducerPath]: productDetailService.reducer,
+
     //----------------- STORE UI -----------------
     cart: cartReducer, // UI state của cart
     controlModal: controlModalReducer, // dung cho dong mo modal( fix click <link> ko dong modal)
@@ -36,6 +38,7 @@ export const store = configureStore({
 
         homeService.middleware,
         cartService.middleware,
+        productDetailService.middleware,
 
       ]),
 
