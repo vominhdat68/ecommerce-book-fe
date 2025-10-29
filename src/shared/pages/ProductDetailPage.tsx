@@ -101,7 +101,7 @@ export const ProductDetailPage: React.FC = () => {
             />
           </div>
 
-          {/* embeb component */}
+          {/* embed component */}
           <LazyLoadOnScroll priority="low">
             <Suspense fallback={<ProductsCardSkeleton />}>
               <NavCatIntroSectionSlider typeProduct="intro" />
