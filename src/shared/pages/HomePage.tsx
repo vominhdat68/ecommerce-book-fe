@@ -11,7 +11,7 @@ import NavCatEventSectionSlider from "@/features/home/layouts/NavSectionSlider/N
 import CatSectionTabs from "@/features/home/components/CatSectionTabs/CatSectionTabs";
 import NavCatPopSectionSlider from "@/features/home/layouts/NavSectionSlider/NavCatPopSectionSlider";
 import CatSectionTabsRank from "@/features/home/components/CatSectionTabsRank";
-
+import NavCatPubSectionSlider from "@/features/home/layouts/NavSectionSlider/NavCatPubSectionSlider";
 
 const Home: React.FC = () => {
   const { data, isLoading: loadingMenu } = useGetMenuQuery();
@@ -20,6 +20,7 @@ const Home: React.FC = () => {
   const featured_categories = data?.data.featured_categories || [];
   const tsdnb = data?.data.tsdnb || [];
   const bst_nb = data?.data.bst_nb || [];
+  const ncc = data?.data.ncc || [];
 
   return (
     <div className="pt-1">
@@ -41,6 +42,8 @@ const Home: React.FC = () => {
       <NavCatPopSectionSlider title="Bộ sưu tập nổi bật" items={bst_nb} isLoading={loadingMenu} />
 
       <CatSectionTabsRank typeProduct="rank" />
+      <NavCatPubSectionSlider items={ncc} isLoading={loadingMenu} />
+
     </div>
   );
 };
