@@ -5,6 +5,7 @@ import bannerTopBar from "/cfhs/image/header_1263x60.png";
 
 import NavMenu from "@/shared/components/header/NavMenu/NavMenu";
 import HeaderLogo from "@/shared/components/header/HeaderLogo"; 
+import SmartSearch from "@/features/search/SmartSearch";
 import HeaderActions from "@/shared/components/header/HeaderActions";
 
 
@@ -29,6 +30,7 @@ const Header: React.FC = () => {
                 <div className="flex items-center relative z-30 h-[60px]">
                     <HeaderLogo />
                     <NavMenu />
+                    <SmartSearch />
                     <HeaderActions/>
                 </div>
             </div>
