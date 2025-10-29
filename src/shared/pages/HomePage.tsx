@@ -8,6 +8,7 @@ import NavCatFlashSaletems from "@/features/home/layouts/NavSectionSlider/NavCat
 
 import NavCatProductSectionSlider from "@/features/home/layouts/NavCatProductSection";
 import NavCatEventSectionSlider from "@/features/home/layouts/NavSectionSlider/NavCatEventSectionSlider";
+import CatSectionTabs from "@/features/home/components/CatSectionTabs/CatSectionTabs";
 
 
 const Home: React.FC = () => {
@@ -26,6 +27,11 @@ const Home: React.FC = () => {
       <NavCatProductSectionSlider items={featured_categories} isLoading={loadingMenu} />
       <NavCatEventSectionSlider type="festival" />
       <NavCatEventSectionSlider type="holiday" />
+
+      <CatSectionTabs typeProduct="trending" sliderConfig={{ displayItemsRow: 2 }} />
+      <CatSectionTabs typeProduct="study" />
+      <CatSectionTabs typeProduct="suppliers" />
+      <CatSectionTabs typeProduct="publisher" />
 
     </div>
   );
