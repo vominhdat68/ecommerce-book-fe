@@ -9,13 +9,15 @@ import NavCatFlashSaletems from "@/features/home/layouts/NavSectionSlider/NavCat
 import NavCatProductSectionSlider from "@/features/home/layouts/NavCatProductSection";
 import NavCatEventSectionSlider from "@/features/home/layouts/NavSectionSlider/NavCatEventSectionSlider";
 import CatSectionTabs from "@/features/home/components/CatSectionTabs/CatSectionTabs";
-
+import NavCatPopSectionSlider from "@/features/home/layouts/NavSectionSlider/NavCatPopSectionSlider";
 
 const Home: React.FC = () => {
   const { data, isLoading: loadingMenu } = useGetMenuQuery();
 
   const categories = data?.data.categories || [];
   const featured_categories = data?.data.featured_categories || [];
+  const tsdnb = data?.data.tsdnb || [];
+  const bst_nb = data?.data.bst_nb || [];
 
   return (
     <div className="pt-1">
@@ -33,6 +35,8 @@ const Home: React.FC = () => {
       <CatSectionTabs typeProduct="suppliers" />
       <CatSectionTabs typeProduct="publisher" />
 
+      <NavCatPopSectionSlider title="Tủ sách nổi bật" items={tsdnb} isLoading={loadingMenu} />
+      <NavCatPopSectionSlider title="Bộ sưu tập nổi bật" items={bst_nb} isLoading={loadingMenu} />
     </div>
   );
 };
