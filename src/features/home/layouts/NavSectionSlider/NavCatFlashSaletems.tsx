@@ -4,7 +4,7 @@ import SectionContainer from "@/shared/components/SectionContainer";
 import SliderWrapperItems from "@/shared/components/SliderWrapperItems";
 import { EventSkeleton } from "@/shared/components/skeleton-screen/HomeSkeleton";
 
-
+import ProductCard from "@/features/home/components/Card/ProductCard";
 import { useGetEventsQuery, useGetProgressBarQuery } from "@/features/home/service/homeService";
 import { mapFlashSaleList } from "@/features/home/map_data/product.map";
 import FlashsaleCountdown from "@/features/home/components/FlashsaleCountdown";
@@ -59,8 +59,7 @@ const NavCatFlashSaletems: React.FC<Props> = ({
                     items={products}
                     renderItem={
                         (item) =>
-                            // product card
-                            <></>
+                            <ProductCard key={item.id} product={item} progressBar={progressMap[item.product_id]} />
                     }
                     configUI={{
                         enabelPadXSwiper: false,
