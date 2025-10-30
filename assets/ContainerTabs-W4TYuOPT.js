@@ -1,3 +1,3 @@
-import{j as e,O as i}from"./index-RONHcivn.js";const l=({labelTabs:t,className:s})=>e.jsx("div",{className:`flex gap-10 px-4 
+import{j as e,O as i}from"./index-0QZekK43.js";const l=({labelTabs:t,className:s})=>e.jsx("div",{className:`flex gap-10 px-4 
     border-b-2 border-[#ededed] text-[14px]
     ${s||""}`,children:t.map(r=>e.jsx("button",{onClick:r.onClick,className:`py-3 cursor-pointer ${r.active?"text-[#C92127] font-semibold border-b-2 border-[#C92127]":"text-gray-600 hover:text-[#C92127]"}`,children:r.label},r.key))}),x=({labelTabs:t,activeTab:s,onTabChange:r,children:a,onActionClick:o})=>e.jsxs(e.Fragment,{children:[e.jsx(l,{labelTabs:t.map(n=>({...n,active:s===n.key,onClick:()=>r(n.key)}))}),e.jsx("div",{className:"py-4",children:a}),e.jsx("div",{className:"text-center mt-5 pb-5",children:e.jsx(i,{variant:"navigation",label:"Xem thêm",onClick:o})})]});export{x as C};
