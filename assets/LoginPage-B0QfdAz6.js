@@ -1,1 +1,0 @@
-import{j as s,A as t}from"./index-DyDWDGaa.js";const a=()=>s.jsxs(s.Fragment,{children:[s.jsx("div",{className:"bg-white py-10 mt-1",children:s.jsx(t,{})}),s.jsx("div",{className:"bg-white py-10 mt-5"})]});export{a as default};
